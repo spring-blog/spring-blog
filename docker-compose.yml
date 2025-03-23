@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    environment:
+      - "MYSQL_ROOT_PASSWORD=0000"
+      - "MYSQL_DATABASE=springblog"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - springblog-network
+
+volumes:
+  mysql-data:
+
+networks:
+  springblog-network:
+    driver: bridge
