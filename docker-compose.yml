@@ -1,12 +1,10 @@
-version: '3.1'
-
 services:
   mysql:
     image: mysql:8.0
     container_name: mysql-container
     environment:
-      MYSQL_ROOT_PASSWORD: 0000
-      MYSQL_DATABASE: springblog
+      - "MYSQL_ROOT_PASSWORD=0000"
+      - "MYSQL_DATABASE=springblog"
     ports:
       - "3306:3306"
     volumes:
