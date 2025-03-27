@@ -14,7 +14,7 @@ public class Post {
     // User Entity Class
     private String author;
 
-    @Column(name = "title", nullable = false)
+    @Column(name = "title", nullable = false, length = 30)
     private String title;
 
     @Column(name = "content")
